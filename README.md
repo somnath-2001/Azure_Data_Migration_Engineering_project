@@ -2,7 +2,7 @@
 # OVERVIEW
 The primary objective of this endeavor is to efficiently oversee, optimize, and conduct in-depth analysis of structured and semi-structured data from YouTube videos. This analysis is grounded in the categorization of videos and the assessment of trending metrics while ensuring robust security measures are in place.
 
-# Project Goals
+# PROJECT GOAL
 1. Data Ingestion
 2. ETL System
 3. Data lake
@@ -23,5 +23,6 @@ The primary objective of this endeavor is to efficiently oversee, optimize, and 
 
 6. AWS Athena: AWS Athena serves as an interactive query service tailored for Amazon S3, obviating the need for data loading as it seamlessly operates directly on data residing within S3.
 
+ #   ARCHITECTURE
 ![architecture](https://github.com/somnath-2001/Youtube_DataEngineering_project/assets/118129457/638e277f-9fc0-46ee-a339-c405cc5f4ebd)
 
