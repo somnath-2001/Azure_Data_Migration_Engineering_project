@@ -1,6 +1,7 @@
 # Youtube_DataEngineering_project
 # OVERVIEW
 The primary objective of this endeavor is to efficiently oversee, optimize, and conduct in-depth analysis of structured and semi-structured data from YouTube videos. This analysis is grounded in the categorization of videos and the assessment of trending metrics while ensuring robust security measures are in place.
+Data set link:- https://www.kaggle.com/datasets/datasnaek/youtube-new
 
 # PROJECT GOAL
 1. Data Ingestion
