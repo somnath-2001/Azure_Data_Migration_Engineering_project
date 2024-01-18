@@ -1,21 +1,18 @@
 
-# End-to-End Azure Data Engineering
+# Data Migration Pipeline on Azure Cloude Platform
 
 This project demonstrates an end-to-end Azure data engineering solution, starting from a local SQL database and culminating in Power BI reporting, all automated.
 
-Thanks to [Mr. K Talks Tech](https://www.youtube.com/@mr.ktalkstech) for the project inspiration.
+
 
 ## Business Objective
 
 This project serves as a learning opportunity for common data engineering practices, focusing on ETL pipeline techniques. The skills sharpened here are valuable for small to medium-sized businesses aiming to migrate their local data to the cloud.
 
-![Insert Image](https://github.com/Nikhil-Pickle/End-to-End-Azure-Data-Engineering/blob/main/Screenshot%202023-10-11%20225825.png)
+![Screenshot 2023-10-11 225825](https://github.com/somnath-2001/Azure_Data_Migration_Engineering_project/assets/118129457/2ccff973-e085-48c0-913d-fa1f650c715a)
+
 
 ## Current Environment
-
-
-
-
 
 - Utilized the AdventureWorks dataset from Microsoft.
 - Set up an on-premises Microsoft SQL server on a personal computer.
@@ -23,7 +20,8 @@ This project serves as a learning opportunity for common data engineering practi
 - Created a new user profile, "nik."
 - Saved "nik" profile's password credentials as a Secret in Azure Key Vault.
 
-![image](https://github.com/Nikhil-Pickle/End-to-End-Azure-Data-Engineering/blob/main/Screenshot%202023-10-12%20011305.png)
+![Screenshot 2023-10-12 011305](https://github.com/somnath-2001/Azure_Data_Migration_Engineering_project/assets/118129457/1d58dcc4-5352-47e0-914f-03e052b20bc3)
+
 
 
 ## 1: Data Ingestion
@@ -35,7 +33,10 @@ Data ingestion from the on-premises SQL server to Azure SQL is accomplished via 
 3. Setting up a copy pipeline to transfer all tables from the local SQL server to the Azure Data Lake's "bronze" folder.
 
 
-![Azure DataFactory](https://github.com/Nikhil-Pickle/End-to-End-Azure-Data-Engineering/blob/main/Screenshot_1.png)
+![Azure DataFactory](https://github.com/somnath-2001/Azure_Data_Migration_Engineering_project/assets/118129457/2bbbbbf1-b257-4544-9477-22f6d2c87d73)
+
+
+
 
 
 
@@ -49,11 +50,13 @@ Azure Databricks, using PySpark, is used for these transformations. Data initial
 2. Transform data from "bronze" to "silver" layer.
 3. Further transform data from "silver" to "gold" layer.
 
-![Databricks Notebooks](https://github.com/Nikhil-Pickle/End-to-End-Azure-Data-Engineering/blob/main/sdfasd.gif)
+![sdfasd](https://github.com/somnath-2001/Azure_Data_Migration_Engineering_project/assets/118129457/6d034dd9-fd3d-4555-bb92-cf46a0a326d7)
+
 
 Azure Data Factory is updated to execute the "bronze" to "silver" and "silver" to "gold" notebooks automatically with each pipeline run.
 
-![Completed Pipeline](https://github.com/Nikhil-Pickle/End-to-End-Azure-Data-Engineering/blob/main/Screenshot%202023-10-12%20002249.png)
+![Screenshot 2023-10-12 002249](https://github.com/somnath-2001/Azure_Data_Migration_Engineering_project/assets/118129457/e300ea40-160e-40f2-8e51-ebea9b51e7c7)
+
 
 
 ## 3: Data Loading
@@ -64,14 +67,15 @@ Data from the "gold" folder is loaded into the Business Intelligence reporting a
 2. Writing stored procedures to extract table information as a SQL view.
 3. Storing views within a server-less SQL Database in Synapse.
 
-![image](https://github.com/Nikhil-Pickle/End-to-End-Azure-Data-Engineering/blob/main/Screenshot%202023-10-12%20012305.png)
+
+![Screenshot 2023-10-12 012305](https://github.com/somnath-2001/Azure_Data_Migration_Engineering_project/assets/118129457/a3d08109-de50-4eec-a87a-7ba3933dd0be)
 
 
 ## 4: Data Reporting
 
 Power BI connects directly to the cloud pipeline using DirectQuery to dynamically update the database. A Power BI report is developed to visualize AdventureWorks dataset data, including sales, product information, and customer gender.
 
-![power bi gif](https://github.com/Nikhil-Pickle/End-to-End-Azure-Data-Engineering/blob/main/gif.gif)
+![gif](https://github.com/somnath-2001/Azure_Data_Migration_Engineering_project/assets/118129457/da9e0206-19c8-4623-983d-2b0b1a6935bf)
 
 
 
@@ -79,7 +83,8 @@ Power BI connects directly to the cloud pipeline using DirectQuery to dynamicall
 
 To verify the end-to-end pipeline, two new customers are added to the local SQL database server. If successful, the pipeline will update, and the Power BI report will dynamically show the new data. The total number of customers should increase from 847 to 849.
 
-![completed](https://github.com/Nikhil-Pickle/End-to-End-Azure-Data-Engineering/blob/main/Screenshot%202023-10-12%20013527.png)  
+![Screenshot 2023-10-12 013527](https://github.com/somnath-2001/Azure_Data_Migration_Engineering_project/assets/118129457/9ab6a58c-9bb6-42d2-98cd-1164f1a4bcf2)
+
 Great success!
 
 
